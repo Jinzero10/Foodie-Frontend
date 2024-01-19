@@ -1,0 +1,93 @@
+.profile__container {
+    height: 100%;
+    border: 1px solid black;
+}
+.profile__title {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.profile__message {
+    padding: 0.2rem 0.5rem;
+    font-size: 12px;
+    background-color: lightpink;
+    color: firebrick;
+}
+.profile__form {
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+    padding-inline: 1rem;
+    border: 1px solid black;
+
+    label {
+        display: block;
+        font-weight: 600;
+    }
+    input {
+        height: 35px;
+        width: 100%;
+        padding-inline: 7px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        margin-bottom: 0.5rem;
+    }
+    button {
+        margin-left: auto;
+        margin-right: 0;
+        font-size: 18px;
+        padding: 0.5rem 3rem;
+        font-weight: bold;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background-color: var(--primary_btn);
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        margin-bottom: 0.2rem;
+
+        .spinner {
+            border-top: 4px solid white;
+        }
+    }
+    button:hover {
+        cursor: pointer;
+        opacity: 0.9;
+    }
+    p {
+        padding: 0.2rem 0.5rem;
+        font-size: 12px;
+        background-color: lightpink;
+        color: firebrick;
+    }
+    span {
+        cursor: pointer;
+        font-weight: 600;
+        color: var(--primary_btn);
+    }
+}
+.profile__btn {
+    display: grid;
+    justify-content: end;
+}
+.profile_form_wrapper {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+    .profile__wrapper {
+        width: 100%;
+    }
+    .profile_form_wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .user__info {
+        width: 100%;
+    }
+}

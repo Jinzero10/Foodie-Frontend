@@ -1,0 +1,28 @@
+.main_title {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--primary_btn);
+    text-transform: capitalize;
+}
+.sub_title {
+    /* color: rgb(255, 79, 0); */
+    font-weight: 600;
+    line-height: 1rem;
+    color: var(--grey_500);
+    text-transform: uppercase;
+}
+.image {
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+    .main_title {
+        font-size: clamp(20px, 1.5em, 2.25rem);
+    }
+}

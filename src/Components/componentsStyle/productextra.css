@@ -1,0 +1,67 @@
+.extra {
+    background-color: #adbad4c5;
+    padding: 5px;
+    border-radius: 0.375rem;
+    margin-bottom: 0.5rem;
+}
+.extra__header {
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+
+    .extra__dropdown {
+        display: inline-flex;
+        gap: 0.25rem;
+        padding: 0.25rem;
+        border: 0;
+        background: transparent;
+    }
+    span {
+        font-size: 0.955rem;
+        font-weight: 600;
+        color: #374151;
+    }
+}
+
+.extra__form {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    label {
+        font-size: 12px;
+        color: gray;
+    }
+    input {
+        background-color: #fefeffc5;
+    }
+    .trash {
+        height: 27px;
+        margin: auto 0;
+    }
+    button {
+        cursor: pointer;
+        font-size: 25px;
+        background-color: transparent;
+        transform: scale(0.9);
+        border: 0;
+        color: #374151;
+    }
+    button:hover {
+        transform: scale(1);
+    }
+}
+.extra__btn {
+    margin-top: 5px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #374151;
+    font-weight: 600;
+    padding: 3px 5px;
+    transform: scale(0.99);
+
+    &:hover {
+        transform: scale(1);
+    }
+}

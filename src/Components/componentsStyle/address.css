@@ -1,0 +1,25 @@
+.address__container {
+    padding: 0.5rem 0.7rem;
+    margin: auto 0;
+    border-radius: 15px;
+    background-color: rgb(128, 128, 128, 0.2);
+    border: none;
+
+    input {
+        height: 35px;
+        width: 100%;
+        padding-inline: 7px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+            rgba(0, 0, 0, 0.23) 0px 3px 6px;
+        margin-bottom: 0.5rem;
+    }
+}
+.address__title {
+    margin-bottom: 0.3rem;
+}
+.address__extra {
+    display: flex;
+    gap: 1rem;
+}

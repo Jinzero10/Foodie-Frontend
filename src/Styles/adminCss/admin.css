@@ -1,0 +1,32 @@
+.admin__main {
+    color: black;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+header {
+    display: none;
+}
+.go_to_menu {
+    position: absolute;
+    right: 5rem;
+    top: 1rem;
+    z-index: 2;
+}
+.go_to_menu button {
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: rgb(219, 52, 52);
+    color: white;
+    transform: scale(0.9);
+    transition: all 250ms ease-in-out;
+    border: none;
+}
+.go_to_menu button:hover {
+    background-color: red;
+    transform: scale(1);
+}

@@ -1,0 +1,106 @@
+.vieworder__container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.831);
+    z-index: 999;
+}
+.vieworder__wrapper {
+    border: 1px solid blue;
+    width: 50%;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #eee;
+
+    button {
+        cursor: pointer;
+        float: right;
+
+        font-weight: bold;
+        padding: 0.5rem 2rem;
+        border-radius: 10px;
+        border: 1px solid black;
+    }
+    button:hover {
+        color: var(--primary_btn);
+        border: 1px solid var(--primary_btn);
+    }
+}
+.vieworder__card {
+    display: grid;
+    grid-template-columns: 70px 1fr 1fr;
+    align-items: center;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    text-transform: capitalize;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+        rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+        rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.vieworder__image {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.vieworder__extra {
+    display: flex;
+    gap: 1rem;
+
+    span {
+        font-size: 13px;
+        margin-left: 0.4rem;
+    }
+}
+.vieworder_quantity_price {
+    display: flex;
+    gap: 1rem;
+
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--primary_btn);
+}
+/* .vieworder_card_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    color: var(--grey_500);
+}
+.vieworder_card_footer {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: var(--grey_500);
+
+    p:hover {
+        cursor: pointer;
+        color: black;
+        text-decoration: underline;
+    }
+    .vieworderprice {
+        color: var(--primary_btn);
+    }
+} */
+/* .vieworder__image {
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border-radius: 50%;
+} */

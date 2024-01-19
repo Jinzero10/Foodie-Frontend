@@ -1,0 +1,131 @@
+.order__title {
+    text-align: center;
+}
+.status__link {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+
+    a {
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--primary_btn);
+        padding: 0.3rem;
+        border: none;
+        border-radius: 5px;
+    }
+    a:hover {
+        background-color: var(--primary_btn);
+        color: white;
+    }
+    a.selected {
+        background-color: var(--primary_btn);
+        color: white;
+    }
+}
+.order_content_container {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    height: 440px;
+    display: grid;
+    align-items: center;
+}
+.order_content_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    margin-inline: 1rem;
+    border-radius: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.orderprice {
+    color: var(--primary_btn);
+}
+.order_card_header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+
+    color: var(--grey_500);
+}
+.order_content_holder {
+    display: flex;
+    gap: 2rem;
+}
+
+.order_holder {
+    width: fit-content;
+    text-align: center;
+}
+.image__holder {
+    width: 70px;
+    height: 70px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.order__name {
+    margin-top: 0.3rem;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold;
+}
+.order_card_footer {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 15px;
+    color: var(--grey_500);
+
+    p:hover {
+        cursor: pointer;
+        color: black;
+        text-decoration: underline;
+    }
+}
+.order__notfound {
+    text-align: center;
+    padding-block: 1rem;
+
+    p {
+        font-size: 16px;
+        font-style: italic;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: var(--grey_500);
+    }
+    button {
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: var(--primary_btn);
+    }
+    button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+}
+.order_content_container::-webkit-scrollbar {
+    width: 10px;
+}
+.order_content_container::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+.order_content_container::-webkit-scrollbar-thumb {
+    background: rgb(128, 128, 128, 0.5);
+    border-radius: 10px;
+}

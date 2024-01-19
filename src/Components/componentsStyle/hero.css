@@ -1,0 +1,72 @@
+.hero {
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    padding-block: 2rem;
+    padding-inline: min(1rem, 4rem);
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    background-image: url("../../images/fresh-vegetables-white.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+.hero__text {
+    width: fit-content;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1rem;
+    backdrop-filter: blur(2px);
+    border-radius: 5px;
+    margin-left: 5rem;
+
+    h1 {
+        text-align: left;
+        font-size: 5rem;
+        line-height: 2.5rem;
+        font-style: italic;
+        font-weight: 700;
+        color: var(--primary_btn);
+        margin-top: 0.5rem;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.5rem;
+        font-weight: 700;
+        color: black;
+    }
+
+    button {
+        width: 200px;
+        padding: 0.3rem 1rem;
+        font-weight: bold;
+        border-radius: 50px;
+        border: none;
+        color: white;
+        background-color: var(--primary_btn);
+    }
+    button:hover {
+        cursor: pointer;
+        opacity: 0.9;
+    }
+    span {
+        font-size: 17px;
+        color: var(--primary_btn);
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+    .hero__text {
+        margin-left: 1rem;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 15px;
+        }
+    }
+}

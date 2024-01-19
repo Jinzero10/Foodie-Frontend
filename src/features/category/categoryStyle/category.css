@@ -1,0 +1,187 @@
+.category__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: 4rem;
+    padding-top: 2rem;
+}
+.category__header {
+    text-align: center;
+}
+.category__content {
+    margin: 0 auto;
+    width: fit-content;
+}
+.category__form {
+    display: flex;
+    margin-bottom: 1rem;
+
+    label {
+        display: block;
+        transition: 0.2s;
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: var(--primary_btn);
+    }
+    input {
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid black;
+        outline: 0;
+        font-size: 1.3rem;
+        color: black;
+        padding: 7px 0;
+        background: transparent;
+        transition: border-color 0.2s;
+    }
+    input:focus {
+        padding-bottom: 6px;
+        font-weight: 700;
+        border-width: 3px;
+        border-image: linear-gradient(to right, #11998e, #38ef7d);
+        border-image-slice: 1;
+    }
+}
+.category_btn {
+    background-color: var(--primary_btn);
+    border: none;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #eee;
+    font-family: inherit;
+    font-size: 16px;
+    height: 48px;
+    font-weight: 600;
+    line-height: 24px;
+    max-width: 100%;
+    padding: 0 25px;
+    margin-left: 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+.cancel_btn {
+    background-color: white;
+    color: black;
+}
+.category_btn:hover {
+    cursor: pointer;
+    outline: 0;
+    opacity: 0.9;
+}
+.update__btn {
+    display: flex;
+    align-items: center;
+}
+/*category button style*/
+.category__icon > button {
+    cursor: pointer;
+    font-size: 1.5rem;
+    width: 2rem;
+    border: none;
+    background-color: transparent;
+}
+.edit__btn {
+    color: rgb(12, 238, 12);
+}
+.delete__btn {
+    color: red;
+}
+/*category list */
+.category__wrapper {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    height: 400px;
+    width: 400px;
+}
+.categorylist__header {
+    position: sticky;
+    padding: 15px 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: var(--primary_btn);
+    height: 3rem;
+    top: 0;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(6, 190px);
+    }
+}
+.categorylist__content {
+    margin-top: 0.5rem;
+    text-align: center;
+
+    ul {
+        display: grid;
+        grid-template-columns: repeat(6, 190px);
+        align-items: center;
+        margin-block: 0.5rem;
+        padding: 0.2rem;
+        border-radius: 5px;
+        background-color: #eee;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+            rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+    li {
+        font-size: 17px;
+        font-weight: bold;
+        color: black;
+    }
+    .productlist__discreption {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    input[type="checkbox"] {
+        cursor: pointer;
+        margin-top: 0.3rem;
+        height: 20px;
+        width: 20px;
+    }
+    ul:hover {
+        cursor: pointer;
+        background-color: var(--primary_btn);
+
+        li {
+            color: white;
+        }
+        .delete__btn {
+            color: white;
+        }
+    }
+    button {
+        cursor: pointer;
+        font-size: 1.5rem;
+        width: 2rem;
+        margin-left: 0.5rem;
+        border: none;
+        background-color: transparent;
+    }
+    .edit__btn {
+        cursor: pointer;
+        color: rgb(11, 194, 11);
+    }
+    .delete__btn {
+        cursor: pointer;
+        color: red;
+    }
+}
+
+/*scrollbar style*/
+.category__wrapper::-webkit-scrollbar {
+    width: 10px;
+}
+.category__wrapper::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+.category__wrapper::-webkit-scrollbar-thumb {
+    background: rgb(128, 128, 128, 0.5);
+    border-radius: 10px;
+}
