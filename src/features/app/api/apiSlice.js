@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { setCredentials } from "../../auth/authSlice";
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: "http://foodie-api.onrender.com",
+    baseUrl: "https://foodie-api-xkjg.onrender.com",
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token;
         if (token) {
