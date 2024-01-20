@@ -7,7 +7,9 @@ import Title from "../../Components/Title";
 import Address from "../../Components/Address";
 import { ZipCode } from "../../utils/Zipcode";
 import useProfile from "../../hooks/useProfile";
+import { FaArrowLeft } from "react-icons/fa";
 import { SmallLoading } from "../../Components/Loading";
+import { useNavigate } from "react-router-dom";
 
 const USER_REGEX = /^[a-zA-Z][a-zA-Z]{3,23}$/;
 const EMAIL_REGEX = /^[\w\-.]+@([\w-]+\.)+[\w-]{2,}$/;
@@ -16,6 +18,7 @@ const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const Profile = () => {
     const { id } = useAuth();
     const { name, email, address, phoneNumber, zipcode } = useProfile();
+    const navigate = useNavigate();
 
     const [profileName, setProfileName] = useState("");
     const [validName, setValidName] = useState(false);
@@ -134,9 +137,16 @@ const Profile = () => {
                     <Title mainTitle="Update Profile" />
                 </div>
                 <p className={message && "profile__message"}>{message}</p>
+
                 <form onSubmit={handleSubmit} className="profile__form">
                     <div className="profile_form_wrapper">
                         <div className="user__info">
+                            <div
+                                className="profile__back"
+                                onClick={() => navigate(-1)}
+                            >
+                                <FaArrowLeft /> <span>Go Back</span>
+                            </div>
                             <div>
                                 <label htmlFor="name">Name</label>
                                 <input

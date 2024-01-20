@@ -1,5 +1,5 @@
 import React from "react";
-import "../../Styles/adminCss/admin.css";
+import "./adminStyle/admin.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import SideNavBar from "./SideNavBar";
 

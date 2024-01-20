@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../Styles/adminCss/sidenav.css";
+import "./adminStyle/sidenav.css";
 import { Link, useNavigate } from "react-router-dom";
 import {
     BiSolidDashboard,
@@ -107,7 +107,7 @@ const SideNavBar = () => {
                 })}
             </ul>
             <div className="sidebar__footer">
-                <p>
+                <p onClick={() => navigate("/profile")}>
                     <span>
                         <CgProfile />
                     </span>

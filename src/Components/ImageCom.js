@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 const Image = ({ id, imageName }) => {
     return (
         <Link to="viewmenu">
-            <img src={`${DATABASEURI}product/getimage/${id}`} alt={imageName} />
+            <img
+                src={`${DATABASEURI}/product/getimage/${id}`}
+                alt={imageName}
+            />
         </Link>
     );
 };
@@ -18,7 +21,7 @@ const DivBg = ({ id, imageName, addClassName, item }) => {
         <div
             className={`image ${addClassName}`}
             style={{
-                backgroundImage: `url("${DATABASEURI}product/getimage/${id}")`,
+                backgroundImage: `url("${DATABASEURI}/product/getimage/${id}")`,
             }}
             title={imageName}
             onClick={() => navigate("/viewmenu", { state: id })}

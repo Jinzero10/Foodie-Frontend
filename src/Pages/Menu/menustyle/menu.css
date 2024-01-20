@@ -121,6 +121,7 @@
 .menucard__wrapper {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -185,6 +186,7 @@
     padding: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    margin-inline: 1rem;
     border-radius: 0.5rem;
     max-width: 28rem;
     background-color: #eee;
@@ -332,6 +334,13 @@
 }
 /* View Menu styles end here*/
 @media only screen and (min-width: 320px) and (max-width: 800px) {
+    .menu__card {
+        width: 200px;
+        height: 20rem;
+    }
+    .addtocart {
+        font-size: 13px;
+    }
     .searchbar {
         width: 80%;
     }
