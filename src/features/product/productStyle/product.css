@@ -252,3 +252,25 @@
     background: rgb(128, 128, 128, 0.5);
     border-radius: 10px;
 }
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+    .product__container {
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+
+        section {
+            margin-top: 2rem;
+        }
+    }
+
+    .product__container::-webkit-scrollbar {
+        width: 5px;
+    }
+    .product__container::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+    }
+    .product__container::-webkit-scrollbar-thumb {
+        background: rgb(128, 128, 128, 0.5);
+        border-radius: 10px;
+    }
+}

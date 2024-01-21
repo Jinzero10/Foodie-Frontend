@@ -10,7 +10,6 @@
 .login_container {
     position: fixed;
     display: grid;
-    justify-content: center;
     top: 0;
     left: 0;
     right: 0;
@@ -19,8 +18,9 @@
     z-index: 10;
 }
 .login_wrapper {
+    display: block;
     width: 380px;
-    height: 430px;
+    height: fit-content;
     margin: auto auto;
     border: 2px solid white;
     background-color: #eee;
@@ -93,4 +93,18 @@
     font-weight: bold;
     padding: 0.5rem;
     margin-bottom: 0.5rem;
+}
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+    .signin__btn {
+        padding: 2px 15px;
+        font-size: 15px;
+    }
+    .tosingup {
+        font-size: 14px;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width: 400px) {
+    .login_wrapper {
+        width: 90%;
+    }
 }

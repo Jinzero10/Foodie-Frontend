@@ -89,3 +89,23 @@
     background: rgb(128, 128, 128, 0.5);
     border-radius: 10px;
 }
+@media only screen and (min-width: 320px) and (max-width: 800px) {
+    .order__container {
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+    }
+    .order__wrapper {
+        margin-top: 2rem;
+    }
+    .order__container::-webkit-scrollbar {
+        width: 5px;
+    }
+    .order__container::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 10px;
+    }
+    .order__container::-webkit-scrollbar-thumb {
+        background: rgb(128, 128, 128, 0.5);
+        border-radius: 10px;
+    }
+}

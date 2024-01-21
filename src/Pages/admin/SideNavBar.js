@@ -21,6 +21,7 @@ import useAuth from "../../hooks/useAuth";
 const SideNavBar = () => {
     const { name } = useAuth();
     const navigate = useNavigate();
+    const [showHambugerMenu, setShowHamburgerMenu] = useState(false);
     const [arrow, setArrow] = useState(false);
     const dispatch = useDispatch();
 
@@ -80,47 +81,66 @@ const SideNavBar = () => {
     ];
 
     return (
-        <aside
-            className={
-                arrow ? "sidebar__container close" : "sidebar__container"
-            }
-        >
-            <div className="sidebar__logo">
-                <span>F</span>
-                <h1>Foodie</h1>
+        <>
+            <div
+                className={
+                    showHambugerMenu ? "sidemenu__bar shownav" : "sidemenu__bar"
+                }
+                onClick={() => setShowHamburgerMenu(!showHambugerMenu)}
+            >
+                <div className="bar"></div>
+                <div className="bar"></div>
+                <div className="bar"></div>
             </div>
-            <div className="arrow" onClick={() => setArrow(!arrow)}>
-                <h2>{arrow ? <BiSolidLeftArrow /> : <BiSolidRightArrow />}</h2>
-            </div>
-            <ul className="sidebar__wrapper">
-                {SideData.map((item, id) => {
-                    return (
-                        <li
-                            key={id}
-                            className={item.cName}
-                            onClick={() => navigate(item.path)}
-                        >
-                            <span>{item.icon}</span>
-                            <Link to={item.path}>{item.title}</Link>
-                        </li>
-                    );
-                })}
-            </ul>
-            <div className="sidebar__footer">
-                <p onClick={() => navigate("/profile")}>
-                    <span>
-                        <CgProfile />
-                    </span>
-                    {name}
-                </p>
-                <button type="button" onClick={logoutHandler}>
-                    <span>
-                        <CiLogin />
-                    </span>
-                    Logout
-                </button>
-            </div>
-        </aside>
+
+            <aside
+                className={
+                    arrow
+                        ? "sidebar__container close"
+                        : showHambugerMenu
+                        ? "sidebar__container showhamburger"
+                        : "sidebar__container"
+                }
+            >
+                <div className="sidebar__logo">
+                    <span>F</span>
+                    <h1>Foodie</h1>
+                </div>
+                <div className="arrow" onClick={() => setArrow(!arrow)}>
+                    <h2>
+                        {arrow ? <BiSolidLeftArrow /> : <BiSolidRightArrow />}
+                    </h2>
+                </div>
+                <ul className="sidebar__wrapper">
+                    {SideData.map((item, id) => {
+                        return (
+                            <li
+                                key={id}
+                                className={item.cName}
+                                onClick={() => navigate(item.path)}
+                            >
+                                <span>{item.icon}</span>
+                                <Link to={item.path}>{item.title}</Link>
+                            </li>
+                        );
+                    })}
+                </ul>
+                <div className="sidebar__footer">
+                    <p onClick={() => navigate("/profile")}>
+                        <span>
+                            <CgProfile />
+                        </span>
+                        {name}
+                    </p>
+                    <button type="button" onClick={logoutHandler}>
+                        <span>
+                            <CiLogin />
+                        </span>
+                        Logout
+                    </button>
+                </div>
+            </aside>
+        </>
     );
 };
 

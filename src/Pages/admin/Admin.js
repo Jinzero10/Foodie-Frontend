@@ -17,4 +17,3 @@ const Admin = () => {
 };
 
 export default Admin;
-/*<SideNavBar /> <Outlet />*/

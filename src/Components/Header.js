@@ -70,7 +70,6 @@ const Header = () => {
                 <div className="line"></div>
                 <div className="line"></div>
             </div>
-            {sidebar && <div style={{ width: "25px" }}></div>}
             <div className="logo_container">
                 <Title mainTitle="Foodie" />
             </div>
@@ -88,6 +87,7 @@ const Header = () => {
                                 scroll={(el) =>
                                     el.scrollIntoView({ behavior: "smooth" })
                                 }
+                                onClick={() => setSideBar(!sidebar)}
                             >
                                 {item.title}
                             </HashLink>

@@ -355,11 +355,11 @@ const SignUp = ({ showSignUp, setShowSignUp, open, setOpen }) => {
                         >
                             Sign Up
                         </button>
-                        <div>
+                        <div className="signup__footer">
                             I have read and accepted the &nbsp;
                             <span className="terms">terms of agreement</span>
                         </div>
-                        <div>
+                        <div className="signup__footer">
                             Have Account already? &nbsp;
                             <span
                                 className="terms"
