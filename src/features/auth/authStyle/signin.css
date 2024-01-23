@@ -15,7 +15,7 @@
     right: 0;
     bottom: 0;
     background-color: rgb(0, 0, 0, 0.7);
-    z-index: 10;
+    z-index: 999;
 }
 .login_wrapper {
     display: block;
@@ -95,15 +95,15 @@
     margin-bottom: 0.5rem;
 }
 @media only screen and (min-width: 320px) and (max-width: 800px) {
-    .signin__btn {
-        padding: 2px 15px;
-        font-size: 15px;
-    }
     .tosingup {
         font-size: 14px;
     }
 }
 @media only screen and (min-width: 320px) and (max-width: 400px) {
+    .signin__btn {
+        font-size: 11px;
+        padding: 3px 5px;
+    }
     .login_wrapper {
         width: 90%;
     }

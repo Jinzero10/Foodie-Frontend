@@ -60,6 +60,21 @@ const Header = () => {
             document.removeEventListener("mousedown", handler);
         };
     });
+
+    const getName = (name) => {
+        if (name.length === 9) {
+            return name;
+        } else if (name.includes(" ")) {
+            const splitName = name.split(" ")[0];
+            if (splitName.length >= 9) {
+                return splitName.substring(0, 9) + "...";
+            } else {
+                return name.split(" ")[0];
+            }
+        } else {
+            return name.substring(0, 9) + "...";
+        }
+    };
     return (
         <header className="main__header">
             <div
@@ -107,7 +122,9 @@ const Header = () => {
                                 className="userprofile__info"
                                 onClick={() => setDrop(!drop)}
                             >
-                                <p className="user__name">Hello, {name}</p>
+                                <p className="user__name">
+                                    Hello, {getName(name)}
+                                </p>
                                 <div
                                     className={`dropdown ${
                                         drop ? "active" : "inactive"
@@ -131,6 +148,7 @@ const Header = () => {
                                             Dashboard
                                         </button>
                                     )}
+
                                     <button
                                         className="logout__btn_mobile"
                                         type="button"

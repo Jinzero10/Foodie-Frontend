@@ -1,5 +1,5 @@
 .main__header {
-    position: fixed;
+    position: relative;
     display: flex;
     width: 100%;
     height: 54px;
@@ -10,9 +10,9 @@
     z-index: 998;
     gap: 4rem;
 }
-
 .menu__bar {
     display: none;
+    z-index: 1;
 }
 .line {
     margin: 5px auto;
@@ -31,9 +31,8 @@
 .navbar {
     display: flex;
     width: 90%;
-    justify-content: space-between;
     align-items: center;
-    scroll-behavior: smooth;
+    justify-content: space-between;
 }
 .nav__wrapper {
     display: flex;
@@ -199,11 +198,17 @@
     .user__name {
         font-size: 12px;
     }
+    .logo_container {
+        margin: 0 auto;
+    }
     .logout__btn {
         display: none;
     }
     .logout__btn_mobile {
         display: block;
+    }
+    .menu__bar.shownav {
+        position: fixed;
     }
     .menu__bar.shownav .line:nth-child(2) {
         opacity: 0;
@@ -215,20 +220,20 @@
         transform: translateY(-8px) rotate(-45deg);
     }
     .nav__wrapper {
-        position: absolute;
+        position: fixed;
         flex-direction: column;
         text-align: center;
-        top: 100%;
+        top: 0;
         left: 0;
         text-align: center;
         width: 100%;
         height: 100vh;
         padding-inline: 0.5rem;
         padding-block: 3rem;
-        /* padding: min(30vh, 5rem) 2em; */
         transform: translateX(-100%);
         transition: transform 350ms ease-in;
         background-color: #eee;
+        z-index: 998;
 
         a {
             width: 100%;
