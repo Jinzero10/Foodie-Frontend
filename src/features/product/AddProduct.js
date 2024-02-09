@@ -156,7 +156,6 @@ const AddProduct = () => {
                                     onChange={(e) =>
                                         setDescription(e.target.value)
                                     }
-                                    required
                                 />
                             </div>
                             <div>

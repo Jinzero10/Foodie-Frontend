@@ -127,13 +127,12 @@ const UpdateProduct = () => {
                                 <textarea
                                     id="description"
                                     type="number"
-                                    maxLength={25}
+                                    maxLength={255}
                                     placeholder="Description"
                                     value={description}
                                     onChange={(e) =>
                                         setDescription(e.target.value)
                                     }
-                                    required
                                 />
                             </div>
                             <div className="price__holder">
