@@ -13,7 +13,7 @@ const Image = ({ id, imageName }) => {
         const fetchImage = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/product/getimage/${id}`
+                    `${DATABASEURI}/product/getimage/${id}`
                 );
                 if (!response.ok) {
                     toast.error("Failed to fetch image");
