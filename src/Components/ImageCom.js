@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./componentsStyle/title.css";
-
+import DATABASEURI from "../utils/Url";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -12,7 +12,9 @@ const Image = ({ id, imageName }) => {
         // Function to fetch image data from backend
         const fetchImage = async () => {
             try {
-                const response = await fetch(`/product/getimage/${id}`);
+                const response = await fetch(
+                    `http://localhost:5000/product/getimage/${id}`
+                );
                 if (!response.ok) {
                     toast.error("Failed to fetch image");
                 }
@@ -51,14 +53,19 @@ const DivBg = ({ id, imageName, addClassName }) => {
         // Function to fetch image data from backend
         const fetchImage = async () => {
             try {
-                const response = await fetch(`/product/getimage/${id}`);
+                const response = await fetch(
+                    `http://localhost:5000/product/getimage/${id}`
+                );
+                console.log(response);
                 if (!response.ok) {
                     toast.error("Failed to fetch image");
                 }
                 // Convert response to Blob object
                 const blob = await response.blob();
                 // Convert Blob to data URL
+                console.log(blob);
                 const src = URL.createObjectURL(blob);
+                console.log(src);
                 setImageSrc(src);
             } catch (error) {
                 console.error(error);

@@ -62,7 +62,9 @@ const ViewOrder = ({ viewOrderProps }) => {
                                             {order.extras.map((ext, i) => {
                                                 return (
                                                     <p key={i}>
-                                                        <span>{ext.name}</span>
+                                                        <span className="extra__name">
+                                                            {ext.name}
+                                                        </span>
                                                         <span>
                                                             {formatCurrency(
                                                                 ext.price

@@ -4,7 +4,7 @@
 }
 .item_container {
     display: flex;
-    width: fit-content;
+    max-width: 100%;
     justify-content: space-between;
     padding: 0.8rem;
     margin: 0 auto;
@@ -73,7 +73,7 @@
 }
 .cart_item_details {
     display: grid;
-    grid-template-columns: 70px 240px 90px 60px 30px;
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
     align-items: center;
     padding: 0.5rem;
     gap: 1.5rem;
@@ -128,10 +128,10 @@
         text-transform: capitalize;
         font-size: 13px;
         display: grid;
-        grid-template-columns: 40px 55px;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        flex-wrap: wrap;
     }
+
     .extra__name {
         font-weight: bold;
     }

@@ -20,16 +20,7 @@ const MenuCard = (item) => {
 
     const handleAddToCart = (food) => {
         if (!role) {
-            toast.error("Please Signin/Login first", {
-                position: "top-center",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-            });
+            toast.error("Please Signin/Login first");
             return;
         }
         if (sizes.length === 0 && ingredients.length === 0) {

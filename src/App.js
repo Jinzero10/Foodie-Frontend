@@ -34,7 +34,17 @@ import NotFound from "./Pages/NotFound";
 function App() {
     return (
         <>
-            <ToastContainer />
+            <ToastContainer
+                position="top-center"
+                autoClose={1000}
+                hideProgressBar={false}
+                closeOnClick={true}
+                pauseOnHover={false}
+                draggable={true}
+                progress={undefined}
+                theme="light"
+                pauseOnFocusLoss={false}
+            />
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />

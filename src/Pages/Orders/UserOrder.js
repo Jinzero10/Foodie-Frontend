@@ -105,7 +105,7 @@ const UserOrder = () => {
                     orders?.map((order) => (
                         <div key={order._id} className="order_content_wrapper">
                             <div className="order_card_header">
-                                <span>{order._id}</span>
+                                <span className="order__id">{order._id}</span>
                                 <span>
                                     <DateTime date={order.createdAt} />
                                 </span>
@@ -123,6 +123,11 @@ const UserOrder = () => {
                                         <div className="order__name">
                                             <p>{item.food.name}</p>
                                         </div>
+                                        {item.quantity > 1 ? (
+                                            <div className="order__quantity">
+                                                {item.quantity}
+                                            </div>
+                                        ) : undefined}
                                     </div>
                                 ))}
                             </div>
