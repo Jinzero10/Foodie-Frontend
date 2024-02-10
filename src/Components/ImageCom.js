@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./componentsStyle/title.css";
-import DATABASEURI from "../utils/Url";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -13,7 +12,7 @@ const Image = ({ id, imageName }) => {
         const fetchImage = async () => {
             try {
                 const response = await fetch(
-                    `${DATABASEURI}/product/getimage/${id}`
+                    `https://foodie-api-xkjg.onrender.com/product/getimage/${id}`
                 );
                 if (!response.ok) {
                     toast.error("Failed to fetch image");
@@ -54,7 +53,7 @@ const DivBg = ({ id, imageName, addClassName }) => {
         const fetchImage = async () => {
             try {
                 const response = await fetch(
-                    `http://localhost:5000/product/getimage/${id}`
+                    `https://foodie-api-xkjg.onrender.com/product/getimage/${id}`
                 );
                 console.log(response);
                 if (!response.ok) {
